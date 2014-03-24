@@ -17,7 +17,7 @@ exports.processPayment = function(data, throwError) {
   var deferred = Q.defer();
   setTimeout(function() {
     if(throwError) {
-      deferred.reject(new Error('An error occured'));
+      deferred.reject(new Error('An error occured in processPayment'));
     }
     deferred.resolve(data);
   }, 800);
